@@ -212,8 +212,8 @@ final class GalleryBlockService extends AbstractBlockService implements Editable
         ]);
 
         $formBuilder->addModelTransformer(new CallbackTransformer(
-            static fn (?MediaInterface $value): ?MediaInterface => $value,
-            static fn (?MediaInterface $value) => $value instanceof MediaInterface ? $value->getId() : $value
+            static fn (?GalleryInterface $value): ?GalleryInterface => $value,
+            static fn (?GalleryInterface $value) => $value instanceof GalleryInterface ? $value->getId() : $value
         ));
 
         return $formBuilder;
